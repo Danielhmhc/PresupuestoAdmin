@@ -33,9 +33,10 @@ public class VentanaInicio extends JFrame implements ActionListener,ItemListener
         setLayout(new GridLayout(2,1));
       //  cargarPanelSup();
         cargarPanelInf();
-        setSize(700,600);
+        setSize(420,330);
         setVisible(true);
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ); 
+        setResizable(false);
     }
     
     public void actionPerformed(ActionEvent ac){
@@ -45,6 +46,8 @@ public class VentanaInicio extends JFrame implements ActionListener,ItemListener
         
         else{
             VentanaRegistroEmp ventReg= new VentanaRegistroEmp();
+            dispose();
+            
         }
     }
     
@@ -56,9 +59,11 @@ public class VentanaInicio extends JFrame implements ActionListener,ItemListener
                 System.out.println("Se selecciono empresa: " + empsel + " con id:" + idsel);
                 if(btnconsultar.isEnabled()==false)
                     btnconsultar.setEnabled(true);
+                
                
             }catch(Exception ex){
                 System.out.println("Error en itemstate: " + ex.getMessage());
+                
             }
         }
     }
@@ -87,10 +92,10 @@ public class VentanaInicio extends JFrame implements ActionListener,ItemListener
     public void cargarPanelInf(){
         PanelInf = new JPanel();
         PanelInf.setLayout(null);
-        empnueva = new JLabel("Registrar una empresa");
-        empnueva.setBounds(50,33,200,20);
+        empnueva = new JLabel("Programa para la obtencion  de presupesto de una empresa");
+        empnueva.setBounds(40,33,350,200);
         PanelInf.add(empnueva);
-        btnregistrar = new JButton("Ir al formulario para Registrar");
+        btnregistrar = new JButton("Ir al formulario para Calcular");
         btnregistrar.setBounds(75,73,250,40);
         btnregistrar.addActionListener(this);
         PanelInf.add(btnregistrar);

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6228432f-77af-453d-9132-8c059c9d3a87">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="Nomempresa" class="java.lang.String"/>
+	<field name="Efectivo" class="java.lang.Float"/>
+	<field name="Cuentas" class="java.lang.Float"/>
+	<field name="Totcir" class="java.lang.Float"/>
+	<field name="Reparto" class="java.lang.Float"/>
+	<field name="Depr" class="java.lang.Float"/>
+	<field name="Totfijo" class="java.lang.Float"/>
+	<field name="Totact" class="java.lang.Float"/>
+	<field name="Prestamo" class="java.lang.Float"/>
+	<field name="Capital" class="java.lang.Float"/>
+	<field name="Utilidad" class="java.lang.Float"/>
+	<field name="TotalCapCon" class="java.lang.Double"/>
+	<field name="PasmasCap" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="301" y="19" width="200" height="28" uuid="ea43597a-742e-4e85-8f56-841cfeb023e3"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Estado de Situacion Financiera]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="361" y="0" width="100" height="20" uuid="1f99cbaf-d70c-4ead-88d2-385f5d08a2f7"/>
+				<textFieldExpression><![CDATA[$F{Nomempresa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="268" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="0" width="100" height="20" uuid="2dffda25-1ecb-4a44-bbf3-f1115b997395"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Activos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="20" width="100" height="20" forecolor="#009999" uuid="7455f76a-fdf3-45ab-9798-67b3a6ceefdd"/>
+				<text><![CDATA[Activo Circulante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="40" width="100" height="20" uuid="e1146822-1eb2-4a40-b6fa-0f02eb41966b"/>
+				<text><![CDATA[Efectivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="60" width="100" height="20" uuid="03a208d8-cc3d-4280-ae39-a545add50437"/>
+				<text><![CDATA[Cuentas por cobrar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="80" width="126" height="27" forecolor="#009999" uuid="067ed01c-b7b1-42fd-b248-ffdcb7964450"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total activo circulante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="123" width="100" height="20" forecolor="#006666" uuid="b36acd2d-73a5-49d4-adbd-7981fb727c4a"/>
+				<text><![CDATA[Activo Fijo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="143" width="126" height="20" uuid="bd19eed9-07c5-4701-b479-97c3426f30ab"/>
+				<text><![CDATA[Equipo de reparto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="163" width="126" height="19" uuid="c338b6ed-4095-4493-909c-95eec82d7fa3"/>
+				<text><![CDATA[Depreciacion acumulada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="182" width="126" height="20" forecolor="#006666" uuid="e404bcb2-c6aa-4a9c-bc45-5e83b42e7d0f"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total activo fijo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="248" width="100" height="20" forecolor="#006666" uuid="a43ea894-9f07-4123-8ed4-fd02a14a9228"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Total Activos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="0" width="100" height="20" uuid="0ad40347-7e5f-4224-9125-08221310381d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Pasivos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="20" width="100" height="20" forecolor="#009999" uuid="42e46312-56e4-4f52-a09b-7929a9d6eed7"/>
+				<text><![CDATA[Pasivo Circulante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="40" width="100" height="20" uuid="5a970101-b0d4-46f6-a130-05f7c918c901"/>
+				<text><![CDATA[Prestamo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="80" width="126" height="27" forecolor="#009999" uuid="a7f881e6-872a-4261-a918-84ec6aad1985"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total Pasivo circulante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="123" width="100" height="20" uuid="1cf4b849-462f-4c55-8dd3-e26bde0b736d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="143" width="100" height="20" uuid="2a9a338c-bb33-4ecf-938f-a72b98bb42c4"/>
+				<text><![CDATA[Capital social]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="163" width="126" height="19" uuid="1ee59955-d94c-465f-8b66-7d9f25bc647f"/>
+				<text><![CDATA[Utilidad acumulada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="182" width="126" height="27" forecolor="#009999" uuid="60c073a7-97ba-4fdd-bd21-79f41aa9e4ac"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Total Capital Contable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="248" width="157" height="20" forecolor="#006666" uuid="2bb2a4e8-b842-4f83-9aef-381f9a71eb09"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Total pasivo mas Capital]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="40" width="100" height="20" uuid="01cb4cfe-b278-478a-a37c-e339e7cd81b1"/>
+				<textFieldExpression><![CDATA[$F{Efectivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="60" width="100" height="20" uuid="c90d3fb9-ae9a-431a-9aa5-d523ba6a7dd3"/>
+				<textFieldExpression><![CDATA[$F{Cuentas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="80" width="100" height="20" uuid="814d6979-908a-49e3-9a6d-cb74a9d2ba80"/>
+				<textFieldExpression><![CDATA[$F{Totcir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="143" width="100" height="20" uuid="955c673a-02ed-42f6-910e-2b20f5fab8ab"/>
+				<textFieldExpression><![CDATA[$F{Reparto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="162" width="100" height="20" uuid="e557ad1d-0485-45dc-8d9a-6a540eb24ecd"/>
+				<textFieldExpression><![CDATA[$F{Depr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="182" width="100" height="20" uuid="0366f1bc-434e-4ef0-8c1e-6ec1923e1ce3"/>
+				<textFieldExpression><![CDATA[$F{Totfijo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="248" width="100" height="20" uuid="f3a5a4bf-c047-4278-bc42-1c1da33a6324"/>
+				<textFieldExpression><![CDATA[$F{Totact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="40" width="100" height="20" uuid="f3ed0a37-e3b8-4e2a-a2be-9db5e944e06d"/>
+				<textFieldExpression><![CDATA[$F{Prestamo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="80" width="86" height="20" uuid="693b4807-40a7-4e7f-851e-114ac525a238"/>
+				<textFieldExpression><![CDATA[$F{Prestamo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="142" width="100" height="20" uuid="b5ceda4e-1055-4dea-b47d-a3d3ae9b7ac9"/>
+				<textFieldExpression><![CDATA[$F{Capital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="162" width="100" height="20" uuid="9dc30482-859e-4934-b465-2ee2bb3291bb"/>
+				<textFieldExpression><![CDATA[$F{Utilidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="667" y="182" width="100" height="20" uuid="1497015b-e9a3-457c-9487-ce0c8152b271"/>
+				<textFieldExpression><![CDATA[$F{TotalCapCon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="667" y="248" width="100" height="20" uuid="49e3cf52-67f2-4303-9026-db2f1edbe99d"/>
+				<textFieldExpression><![CDATA[$F{PasmasCap}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

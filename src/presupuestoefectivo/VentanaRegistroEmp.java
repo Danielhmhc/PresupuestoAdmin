@@ -16,7 +16,7 @@ public class VentanaRegistroEmp extends JFrame implements ActionListener {
     private JTextField campo1,campo2,campo3,campo4,campo5,campo6,campo7,campo8,campo9,campo10,campo11,campo12,campo13,campo14,campo15,campo16,campo17,campo18,campo19,campo20,campo21,campo22,campo23;
     private JButton btnvalidar,btnprocesar;
     private JLabel idasignado;
-    
+    public Reportetablas2 repo;
     public VentanaRegistroEmp(){
         //Inicializamos las etiquetas
         lblempresa = new JLabel("Nombre Empresa :");
@@ -492,6 +492,12 @@ public class VentanaRegistroEmp extends JFrame implements ActionListener {
                     
                     
                     
+                    
+                    repo=new Reportetablas2(id,nomEmpresa);
+                    repo.setVisible(true);
+                    new Reportetablas(id,nomEmpresa,repo).setVisible(true);
+                    dispose();
+                   
                     
                       
                     

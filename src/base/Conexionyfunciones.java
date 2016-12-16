@@ -9,6 +9,7 @@ import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 public class Conexionyfunciones {
     //Variables para la conexion con la base
@@ -255,5 +256,30 @@ public class Conexionyfunciones {
         }
         return dev;
     } 
+    
+    public void datosTabla(int id, DefaultTableModel  tabla,String ntabla){
+        try {
+            int numerocolumnas,cont=0;
+            
+            Statement state=  conexion.createStatement();
+            String query= "select * from " + ntabla + " where idEmpresa= " + id + " ;";
+            ResultSet res= state.executeQuery(query);
+            numerocolumnas= res.getMetaData().getColumnCount();
+            Object[] contenedor= new Object[numerocolumnas];
+            
+            while(res.next()){
+                for(cont=0;cont<numerocolumnas;cont++){
+                    contenedor[cont]=res.getObject(cont+1);
+                }
+            
+            tabla.addRow(contenedor);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error :" +ex.getMessage());
+        }
+    
+    }
+    
+    
     
 }
