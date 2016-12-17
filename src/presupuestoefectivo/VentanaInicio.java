@@ -37,6 +37,7 @@ public class VentanaInicio extends JFrame implements ActionListener,ItemListener
         setVisible(true);
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ); 
         setResizable(false);
+        this.setLocationRelativeTo(this);
     }
     
     public void actionPerformed(ActionEvent ac){

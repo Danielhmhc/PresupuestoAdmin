@@ -156,6 +156,8 @@ public class VentanaRegistroEmp extends JFrame implements ActionListener {
         setSize(700,600);
         setVisible(true);
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ); 
+        this.setLocationRelativeTo(this);
+        
     }
     
     public void actionPerformed(ActionEvent e) {

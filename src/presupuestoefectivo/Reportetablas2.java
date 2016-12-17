@@ -40,6 +40,7 @@ public class Reportetablas2 extends javax.swing.JFrame {
         
          setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
          setBounds(400, 0, 750, 300);
+         this.setLocationRelativeTo(this);
     }
     
     

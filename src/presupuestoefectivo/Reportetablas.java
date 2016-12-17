@@ -53,7 +53,7 @@ public class Reportetablas extends javax.swing.JFrame {
     
         initComponents();  
         
-        
+        this.setLocationRelativeTo(this);
     }
     
     
